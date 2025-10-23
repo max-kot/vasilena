@@ -3666,6 +3666,8 @@ body {
 	display: -webkit-inline-box;
 	display: -ms-inline-flexbox;
 	display: inline-flex;
+	-ms-flex-negative: 0;
+	flex-shrink: 0;
 }
 
 .header__top {
@@ -3975,6 +3977,7 @@ body {
 	transform: translateY(-100%);
 	opacity: 0;
 	visibility: hidden;
+	pointer-events: none;
 	-webkit-transition: all 0.3s;
 	transition: all 0.3s;
 }
@@ -3985,6 +3988,7 @@ body {
 	-ms-transform: translateY(0);
 	transform: translateY(0);
 	visibility: visible;
+	pointer-events: auto;
 }
 
 .catalog-nav__list {
@@ -4837,6 +4841,7 @@ body {
 		transform: translateY(100%);
 		opacity: 0;
 		visibility: hidden;
+		pointer-events: none;
 		-webkit-transition: all 0.3s;
 		transition: all 0.3s;
 	}
@@ -4847,6 +4852,7 @@ body {
 		transform: translateY(0);
 		opacity: 1;
 		visibility: visible;
+		pointer-events: auto;
 	}
 
 	.header__menu {
@@ -4937,6 +4943,7 @@ body {
 		-webkit-transform: translateY(100%);
 		-ms-transform: translateY(100%);
 		transform: translateY(100%);
+		z-index: -100;
 		-ms-grid-columns: 1fr;
 		grid-template-columns: 1fr;
 		padding-inline: 10px;
@@ -4947,6 +4954,7 @@ body {
 		display: grid;
 		opacity: 0;
 		visibility: hidden;
+		pointer-events: none;
 		position: static;
 		height: 0;
 		padding: 0;
@@ -4958,8 +4966,10 @@ body {
 	.catalog-nav__sub-list.category-nav-list-active {
 		height: 100%;
 		padding: 10px;
+		padding-right: 50px;
 		opacity: 1;
 		visibility: visible;
+		pointer-events: auto;
 	}
 
 	.footer__container {
