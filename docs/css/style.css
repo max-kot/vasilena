@@ -3435,8 +3435,8 @@ body {
 	-webkit-box-align: center;
 	-ms-flex-align: center;
 	align-items: center;
-	bottom: var(--container-padding);
-	right: max(var(--container-padding), (100% - var(--container-width)) / 2);
+	bottom: calc(var(--header-bottom-menu-height) + 10px);
+	right: max(var(--container-padding), (100% - 85rem) / 2);
 	padding-bottom: 4px;
 	z-index: 54;
 	-webkit-box-shadow: var(--shadow);
@@ -4099,7 +4099,7 @@ body {
 }
 
 .footer {
-	padding-block: 48px 30px;
+	padding-block: 48px 58px;
 	background: var(--color-footer-bg);
 	color: var(--color-footer-text);
 	font-size: 0.875rem;
